@@ -21,4 +21,11 @@ def load_model_and_extractor():
 
 model, feature_extractor = load_model_and_extractor()
 
+# --------------------------
+# 2. Streamlit Page Setup
+# --------------------------
+st.set_page_config(page_title="Brain Tumor Detection | ViT", layout="wide", page_icon="🧠")
+
+
+
 
