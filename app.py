@@ -26,8 +26,6 @@ model, feature_extractor = load_model_and_extractor()
 # --------------------------
 st.set_page_config(page_title="Brain Tumor Detection | ViT", layout="wide", page_icon="🧠")
 
-st.set_page_config(page_title="Brain Tumor Detection | ViT", layout="wide", page_icon="🧠")
-
 st.markdown("""
 <style>
 body {
@@ -66,6 +64,7 @@ hr {
 }
 </style>
 """, unsafe_allow_html=True)
+
 
 
 
