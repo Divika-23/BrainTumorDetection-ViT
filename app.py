@@ -66,6 +66,21 @@ hr {
 """, unsafe_allow_html=True)
 
 
+menu_items = {
+    "🔍 Why Do Brain Tumors Happen?": "They occur due to abnormal cell growth triggered by radiation, genetics, immune problems, or unknown causes.",
+    "📌 What Are the Reasons?": "- Genetic mutations<br>- Radiation exposure<br>- Environmental toxins<br>- Family history<br>- Immune system disorders",
+    "🚫 Things to Avoid": "- Radiation without medical reason<br>- Smoking and alcohol<br>- Skipping medical check-ups<br>- Poor sleep and junk food",
+    "✅ Do's and ❌ Don'ts": "<b>Do's:</b><br>- Follow treatments<br>- Take medications<br>- Inform doctor of symptoms<br><br><b>Don'ts:</b><br>- Skip MRI scans<br>- Ignore symptoms<br>- Self-medicate",
+    "💊 Medications": "- Anti-seizure drugs<br>- Chemotherapy<br>- Steroids<br>- Pain control<br><i>Follow only your doctor’s prescription.</i>",
+    "💡 Health Tips": "- Eat fruits/veggies<br>- Sleep 7–8 hours<br>- Stay hydrated<br>- Meditate<br>- Exercise"
+}
+
+if "selected_menu" not in st.session_state:
+    st.session_state.selected_menu = None
+
+
+
+
 
 
 
