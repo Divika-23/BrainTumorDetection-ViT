@@ -79,6 +79,17 @@ if "selected_menu" not in st.session_state:
     st.session_state.selected_menu = None
 
 
+col1, col2, col3 = st.columns([1, 2.5, 0.5])
+
+with col1:
+    st.markdown("### 🧭 Info Menu")
+    for item in menu_items:
+        if st.button(item, key=item):
+            st.session_state.selected_menu = item
+        st.markdown("<hr>", unsafe_allow_html=True)
+
+
+
 
 
 
