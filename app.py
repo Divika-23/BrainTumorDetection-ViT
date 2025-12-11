@@ -88,6 +88,34 @@ with col1:
             st.session_state.selected_menu = item
         st.markdown("<hr>", unsafe_allow_html=True)
 
+with col2:
+    if st.session_state.selected_menu:
+        selected = st.session_state.selected_menu
+        st.markdown(f"""
+        <div class="section">
+            <h3>{selected}</h3>
+            <p>{menu_items[selected]}</p>
+        </div>
+        """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <div class="section">
+        <h3>🧠 What is a Brain Tumor?</h3>
+        <p>A brain tumor is an abnormal growth of cells in or around the brain...</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <div class="section">
+        <h4>📤 Upload MRI Image</h4>
+        <p>Drag and drop or browse a brain MRI image file (JPG, PNG).</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    uploaded_file = st.file_uploader("", type=["jpg", "jpeg", "png"], label_visibility="collapsed")
+
+
+
 
 
 
