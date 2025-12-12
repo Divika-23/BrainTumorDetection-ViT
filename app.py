@@ -115,6 +115,25 @@ with col2:
     uploaded_file = st.file_uploader("", type=["jpg", "jpeg", "png"], label_visibility="collapsed")
 
 
+if uploaded_file:
+    image = Image.open(uploaded_file).convert("RGB")
+
+    with st.spinner("Analyzing image..."):
+        time.sleep(2)
+
+        inputs = feature_extractor(images=image, return_tensors="pt")
+
+        with torch.no_grad():
+            outputs = model(**inputs)
+            probs = torch.nn.functional.softmax(outputs.logits, dim=1)
+            preds = torch.argmax(probs, dim=1).item()
+
+        classes = ["No Tumor", "Tumor Detected"]
+        confidence = probs[0][preds].item() * 100
+
+
+
+
 
 
 
