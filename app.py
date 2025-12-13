@@ -131,6 +131,10 @@ if uploaded_file:
         classes = ["No Tumor", "Tumor Detected"]
         confidence = probs[0][preds].item() * 100
 
+img_col, result_col = st.columns([2, 1], gap="small")
+
+
+
 
 
 
