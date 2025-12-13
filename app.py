@@ -151,6 +151,15 @@ with result_col:
         """, unsafe_allow_html=True)
 
 
+st.markdown("""
+<div class="footer">
+    Streamlit UI for Brain Tumor Detection using Vision Transformers
+</div>
+""", unsafe_allow_html=True)
+
+
+
+
 
 
 
