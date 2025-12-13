@@ -133,6 +133,25 @@ if uploaded_file:
 
 img_col, result_col = st.columns([2, 1], gap="small")
 
+with img_col:
+    st.image(image, caption="🖼️ Uploaded MRI Image", width=300)
+
+with result_col:
+    if preds == 1:
+        st.markdown("""
+        <div style="background-color:#ff4d4f; color:white; padding:18px; border-radius:12px;">
+            <h3>🚨 Tumor Detected</h3>
+        </div>
+        """, unsafe_allow_html=True)
+    else:
+        st.markdown("""
+        <div style="background-color:#52c41a; color:white; padding:18px; border-radius:12px;">
+            <h3>✅ No Tumor Detected</h3>
+        </div>
+        """, unsafe_allow_html=True)
+
+
+
 
 
 
