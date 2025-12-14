@@ -1,1 +1,4 @@
 !pip install torch torchvision transformers scikit-learn opencv-python matplotlib
+
+from google.colab import files
+uploaded = files.upload()
