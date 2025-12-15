@@ -5,4 +5,10 @@ uploaded = files.upload()
 
 import zipfile
 import os
+with zipfile.ZipFile("data[1].zip", 'r') as zip_ref:
+    zip_ref.extractall("data")
+
+# Verify contents
+os.listdir("data")
+
 
