@@ -11,4 +11,9 @@ with zipfile.ZipFile("data[1].zip", 'r') as zip_ref:
 # Verify contents
 os.listdir("data")
 
+from torchvision import datasets, transforms
+from torch.utils.data import DataLoader
+import torch
+
+
 
