@@ -21,6 +21,10 @@ transform = transforms.Compose([
     transforms.Normalize([0.5], [0.5])
 ])
 
+data_dir = 'data'
+dataset = datasets.ImageFolder(data_dir, transform=transform)
+
+
 
 
 
