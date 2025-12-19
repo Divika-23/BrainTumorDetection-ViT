@@ -35,6 +35,9 @@ val_loader = DataLoader(val_dataset, batch_size=16)
 
 from transformers import ViTForImageClassification
 
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+
 
 
 
