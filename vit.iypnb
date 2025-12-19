@@ -37,6 +37,12 @@ from transformers import ViTForImageClassification
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
+model = ViTForImageClassification.from_pretrained(
+    'google/vit-base-patch16-224-in21k',
+    num_labels=2
+).to(device)
+
+
 
 
 
