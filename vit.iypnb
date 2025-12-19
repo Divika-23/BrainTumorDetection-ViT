@@ -33,6 +33,9 @@ train_dataset, val_dataset = torch.utils.data.random_split(
 train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True)
 val_loader = DataLoader(val_dataset, batch_size=16)
 
+from transformers import ViTForImageClassification
+
+
 
 
 
