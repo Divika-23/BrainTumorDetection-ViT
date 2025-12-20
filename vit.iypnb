@@ -45,6 +45,8 @@ model = ViTForImageClassification.from_pretrained(
 from torch.optim import AdamW
 from tqdm import tqdm
 import torch.nn.functional as F
+optimizer = AdamW(model.parameters(), lr=5e-5)
+epochs = 5
 
 
 
