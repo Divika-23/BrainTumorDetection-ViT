@@ -42,6 +42,10 @@ model = ViTForImageClassification.from_pretrained(
     num_labels=2
 ).to(device)
 
+from torch.optim import AdamW
+from tqdm import tqdm
+import torch.nn.functional as F
+
 
 
 
