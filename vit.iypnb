@@ -64,6 +64,9 @@ for epoch in range(epochs):
 torch.save(model.state_dict(), "brain_tumor_vit.pth")
 
 from sklearn.metrics import classification_report, confusion_matrix
+model.eval()
+predictions, labels_all = [], []
+
 
 
 
