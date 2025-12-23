@@ -67,6 +67,15 @@ from sklearn.metrics import classification_report, confusion_matrix
 model.eval()
 predictions, labels_all = [], []
 
+with torch.no_grad():
+    for images, labels in val_loader:
+        images = images.to(device)
+        outputs = model(pixel_values=images)
+        preds = torch.argmax(outputs.logits, dim=1).cpu().numpy()
+        predictions.extend(preds)
+        labels_all.extend(labels.numpy())
+
+
 
 
 
