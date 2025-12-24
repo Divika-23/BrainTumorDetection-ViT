@@ -74,6 +74,9 @@ with torch.no_grad():
         preds = torch.argmax(outputs.logits, dim=1).cpu().numpy()
         predictions.extend(preds)
         labels_all.extend(labels.numpy())
+print("Classification Report:\n", classification_report(labels_all, predictions))
+print("Confusion Matrix:\n", confusion_matrix(labels_all, predictions))
+
 
 
 
