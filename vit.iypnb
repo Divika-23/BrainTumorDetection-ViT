@@ -91,6 +91,8 @@ model.eval()
 with torch.no_grad():
     output = model(pixel_values=input_tensor)
     pred = torch.argmax(output.logits, dim=1).item()
+label_map = ["No Tumor", "Tumor"]
+print("Prediction:", label_map[pred])
 
 
 
