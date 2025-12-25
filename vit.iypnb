@@ -78,6 +78,9 @@ print("Classification Report:\n", classification_report(labels_all, predictions)
 print("Confusion Matrix:\n", confusion_matrix(labels_all, predictions))
 
 
+from PIL import Image
+
+
 
 
 
